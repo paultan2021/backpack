@@ -17,10 +17,10 @@
  */
 
 /*
- * The purpose of this file is to provide a babel config file for building and distributing Backpack components.
+ * The purpose of this file is to provide babel config for configuration and use with storybook.
  *
- * For configuration and use with storybook there is a separate config file in the .storybook/babel.config.js folder,
- * which provides configuration for running the storybook development system.
+ * For babel config used in building and distributing Backpack components, there is a separate file
+ * located in the root of the project.
  */
 
 module.exports = {
@@ -34,7 +34,9 @@ module.exports = {
       },
     ],
     '@babel/preset-react',
+    // TODO: Remove this once we have migrated all flow types.
     '@babel/preset-flow',
+    '@babel/preset-typescript',
   ],
   plugins: [
     '@babel/plugin-proposal-object-rest-spread',
